@@ -43,6 +43,6 @@ class TokenManager:
 
 
 
-tokenManager = TokenManager()
-print(tokenManager.getToken())
+#tokenManager = TokenManager()
+#print(tokenManager.getToken())
 
