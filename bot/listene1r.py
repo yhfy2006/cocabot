@@ -75,6 +75,7 @@ def KeepRecord(TimeoutSignal, LastBlock):
     #listen(silence,Time)
 
 def listen(silence,Time):
+    #openAudio()
     print "waiting for Speech"
     while silence:
 
@@ -109,16 +110,7 @@ def listen(silence,Time):
 
 
 
+
 #p = pyaudio.PyAudio()
-#
-#stream = p.open(format = FORMAT,
-#    channels = CHANNELS,
-#    rate = RATE,
-#    input = True,
-#    output = True,
-#    frames_per_buffer = chunk)
-#
-#
-#
-#
+#stream = p.open(format = FORMAT,channels = CHANNELS,rate = RATE,input = True,output = True,frames_per_buffer = chunk)
 #listen(silence,Time)

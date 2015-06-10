@@ -20,7 +20,7 @@ class TokenManager:
             editableJsonData = {key:value for key, value in jsonData.items()}
             currentTime = int(round(time.time()))
             editableJsonData["setTime"]=currentTime
-            json.dump(editableJsonData,tokefile);
+            json.dump(editableJsonData,tokefile)
             return editableJsonData
 
     def getTokenFromAPI(self):
