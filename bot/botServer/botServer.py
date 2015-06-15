@@ -1,6 +1,9 @@
 from flask import Flask
+from flask import request
 import os
 import subprocess
+import json
+from coreServices.cocoServiceFactory import CocoServiceFactory
 
 app = Flask(__name__)
 
@@ -8,9 +11,12 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!'
 
-@app.route('/cococmd/<cmd>')
-def cocoCommand(cmd):
-    return cmd;
+@app.route('/cococmd', methods=['POST'])
+def cocoCommand():
+    payloadInJson = json.loads(request.data)
+    serviceFactory = CocoServiceFactory()
+    serviceFactory.invokeWithData(payloadInJson)
+    return 'done'
 
 @app.route('/tts/<txt>')
 def tts(txt):

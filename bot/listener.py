@@ -3,7 +3,7 @@ import math
 import struct
 import wave
 
-class listener:
+class Listener:
 
     #Assuming Energy threshold upper than 30 dB
     THRESHOLD = 30
